@@ -1,0 +1,20 @@
+server:
+  port: 8090
+  servlet:
+    contextPath: /app
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: none
+      connection:
+        driver_class: org.postgresql.Driver
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgresSQLDialect
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres?currentSchema=student
+    username: postgres
+    password: root
+    intialization-mode: always
+  profiles:
+    active: dev
